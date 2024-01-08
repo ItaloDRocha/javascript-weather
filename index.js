@@ -1,5 +1,21 @@
 // WEATHER APP
 
+
+//O uso do async em uma função possibilita o uso do await, que espera pelo retorno da promise contida na função do await.
+/*
+async function{
+  await funcAleatoria(); - deve conter/retornar uma promisse, não necessariamente retornando um valor;
+  funcAleatoria2(); - só ira ser executada de forma sincrona devido ao await;
+}
+
+funcAleatoria(){
+    new Promise((resolve, reject) => {
+      resolve(); - poder conter ou não o valor retornado pela promise
+    })
+}
+
+*/
+
 const weatherForm = document.querySelector(".weatherForm");
 const cityInput = document.querySelector(".cityInput");
 const card = document.querySelector(".card");
@@ -96,3 +112,4 @@ function displayError(message) {
   card.style.display = "flex";
   card.appendChild(errorDisplay);
 }
+
